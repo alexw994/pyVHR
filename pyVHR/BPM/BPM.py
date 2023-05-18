@@ -7,7 +7,10 @@ import plotly.graph_objects as go
 from scipy.interpolate import interp1d
 from pyVHR.plot.visualize import VisualizeParams
 from pyVHR.BPM.utils import *
-from scipy.stats import median_abs_deviation as mad
+try:
+    from scipy.stats import median_absolute_deviation as mad
+except:
+    from scipy.stats import median_abs_deviation as mad
 
 """
 This module contains all the class and the methods for transforming 
